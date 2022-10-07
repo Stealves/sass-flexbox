@@ -1,9 +1,30 @@
-header {
-  @include flexCenter(column, lightblue);
+@use'variables' as *;
+@use 'mixin' as *;
 
-  color: variables.$textColor;
+header {
+  @include flexCenter(column, $black, 50vh);
+
+  color: $white;
+
+  h1 {
+    font-size: 3em;
+  }
 
   button {
-    background: variables.$primaryBtn;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 99px;
+    background-color: $white;
+    color: $secondaryColor;
+    transition: all 200ms ease-in-out;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    &:hover {
+      color: $white;
+      background-color: $secondaryColor;
+    }
   }
 }
