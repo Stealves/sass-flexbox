@@ -1,0 +1,9 @@
+header {
+  @include flexCenter(column, lightblue);
+
+  color: variables.$textColor;
+
+  button {
+    background: variables.$primaryBtn;
+  }
+}
